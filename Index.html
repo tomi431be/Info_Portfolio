@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Hardware vs Software - Un petit jeu pour apprendre à différencier le matériel informatique des logiciels.">
+
+    <title>Hardware vs Software</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <!-- Écran d'accueil -->
+        <section id="start-screen" class="screen active">
+            <div class="logo">💻</div>
+
+            <h1>Hardware <span>vs</span> Software</h1>
+
+            <p class="subtitle">
+                Sauras-tu faire la différence entre le matériel
+                et les logiciels informatiques ?
+            </p>
+
+            <div class="info-cards">
+                <div class="info-card">
+                    <span>🖥️</span>
+                    <strong>Hardware</strong>
+                    <small>Le matériel physique</small>
+                </div>
+
+                <div class="info-card">
+                    <span>💾</span>
+                    <strong>Software</strong>
+                    <small>Les logiciels et programmes</small>
+                </div>
+            </div>
+
+            <button id="start-button" class="main-button">
+                Commencer le jeu 🚀
+            </button>
+
+            <p class="question-count">15 questions</p>
+        </section>
+
+
+        <!-- Écran du jeu -->
+        <section id="game-screen" class="screen">
+
+            <div class="game-header">
+                <div>
+                    <span class="label">Question</span>
+                    <strong>
+                        <span id="question-number">1</span>/15
+                    </strong>
+                </div>
+
+                <div class="score-box">
+                    ⭐ <span id="score">0</span>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+
+            <div class="question-card">
+
+                <div id="question-icon" class="question-icon">
+                    ❓
+                </div>
+
+                <p class="question-label">
+                    Cette affirmation correspond à...
+                </p>
+
+                <h2 id="question-text">
+                    Question
+                </h2>
+
+            </div>
+
+            <div class="answers">
+
+                <button
+                    class="answer-button hardware"
+                    data-answer="hardware"
+                >
+                    <span class="answer-icon">🖥️</span>
+
+                    <span>
+                        <strong>Hardware</strong>
+                        <small>Matériel physique</small>
+                    </span>
+                </button>
+
+                <button
+                    class="answer-button software"
+                    data-answer="software"
+                >
+                    <span class="answer-icon">💾</span>
+
+                    <span>
+                        <strong>Software</strong>
+                        <small>Logiciel / programme</small>
+                    </span>
+                </button>
+
+            </div>
+
+            <!-- Explication -->
+            <div id="feedback" class="feedback">
+
+                <div id="feedback-icon" class="feedback-icon">
+                    ✓
+                </div>
+
+                <div>
+                    <h3 id="feedback-title">Bonne réponse !</h3>
+                    <p id="feedback-text">
+                        Explication.
+                    </p>
+                </div>
+
+            </div>
+
+            <button id="next-button" class="next-button">
+                Question suivante →
+            </button>
+
+        </section>
+
+
+        <!-- Écran final -->
+        <section id="result-screen" class="screen">
+
+            <div class="result-icon">
+                🏆
+            </div>
+
+            <p class="result-label">
+                Partie terminée !
+            </p>
+
+            <h1 id="result-title">
+                Bravo !
+            </h1>
+
+            <div class="final-score">
+                <span id="final-score">0</span>
+                <small>/ 15</small>
+            </div>
+
+            <p id="result-message" class="result-message">
+                Excellent travail !
+            </p>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <span id="correct-answers">0</span>
+                    <small>Bonnes réponses</small>
+                </div>
+
+                <div class="stat">
+                    <span id="wrong-answers">0</span>
+                    <small>Mauvaises réponses</small>
+                </div>
+
+                <div class="stat">
+                    <span id="percentage">0%</span>
+                    <small>Réussite</small>
+                </div>
+
+            </div>
+
+            <button id="restart-button" class="main-button">
+                🔄 Rejouer
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Hardware vs Software · Jeu éducatif
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
